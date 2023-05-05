@@ -1,0 +1,44 @@
+{
+    "start": [
+        {
+            "class": "plan-title",
+            "value": "Reach for your goals"
+        },
+        {
+            "class": "plan-desc",
+            "value": "ADHD Planner will help you to stop losing track of your time and be more productive."
+        },
+        {
+            "class": "plan-btn",
+            "value": "Let's plan"
+        },
+        {
+            "class": "img-fluid",
+            "value": "welcome-circle.svg"
+        },
+        {
+            "class": "policy-text",
+            "value": "This site is not a part of the Facebook website of Meta Inc. Additionally this site is NOT endorsed by Facebook in any way. FACEBOOK is a trademark of Meta, Inc."
+        }
+    ],
+    "welcome": [
+        {
+            "class": "hello-title",
+            "value": "Start your ADHD Planner!"
+        },
+        {
+            "class": "img-fluid",
+            "value": "Group 2307.svg"
+        },
+        {
+            "class": "hello-desc",
+            "value": "To start your planning journey, we need to know a bit about you. Don’t worry, it will take only a few minutes."
+        },
+        {
+            "class": "hello-btn",
+            "value": "Let's go"
+        }
+    ]
+}
+
+  
