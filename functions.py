@@ -5,13 +5,17 @@ import allure
 import json
 import os
 import snoop
+import time
 
 
 class RegistrationFlow:
     def __init__(self, browser):
         self.browser = browser
-        # Input data and texts
-        self.reg_flow_1a = os.path.join("flows", "reg_a1.json")
+        # Texts
+        self.reg_cont_a1 = os.path.join("flows", "reg_cont_a1.json")
+
+        # Input data
+        self.reg_inp_a1 = os.path.join("flows", "reg_inp_a1.json")
 
 
     def check_elements(self, elements):
@@ -25,6 +29,7 @@ class RegistrationFlow:
                 actual_value_xpath = f"""
                     //*[contains(@class, "{el_class}")][contains(normalize-space(), "{el_contents}")]
                     | //img[contains(@class, "{el_class}")][contains(@src, "{el_contents}")]
+                    | //*[contains(@class, "{el_class}")][contains(@required, "")][contains(@placeholder, "{el_contents}")]
                 """
                 actual_value = WebDriverWait(self.browser, 10).until(EC.visibility_of_element_located((By.XPATH, actual_value_xpath)))
                 assert actual_value.is_displayed()
@@ -44,11 +49,6 @@ class RegistrationFlow:
                     check_status = False
             finally:
                 with allure.step(f"Element check status for element {el_class} with value {el_contents}"):
-                    allure.attach(
-                        self.browser.get_screenshot_as_png(),
-                        name=f"{el_class}_{el_contents}_check_status",
-                        attachment_type=allure.attachment_type.PNG
-                    )
                     allure.attach(actual_value_xpath, name="actual_value_xpath", attachment_type=allure.attachment_type.TEXT)
                     if check_status:
                         allure.attach("Element check passed", name="check_status", attachment_type=allure.attachment_type.TEXT)
@@ -71,7 +71,7 @@ class RegistrationFlow:
         # Take a screenshot and attach it to the report
         allure.attach(
             self.browser.get_screenshot_as_png(),
-            name="Application_opened",
+            name="Screen",
             attachment_type=allure.attachment_type.PNG
         )
 
@@ -103,9 +103,28 @@ class RegistrationFlow:
             self.check_elements(elements['start'])
 
     
-    def welcome_page(self, flow, url):
+    def welcome_page(self, flow):
         with allure.step("Element Checks"):
             with open(flow, 'r') as f:
                 elements = json.load(f)
             
             self.check_elements(elements['welcome'])
+
+    @snoop
+    def name_page(self, flow, inputs):
+        with allure.step("Element Checks"):
+            with open(flow, 'r') as f:
+                elements = json.load(f)
+            
+            self.check_elements(elements['name'])
+
+        with allure.step("Input name"):
+            with open(inputs) as f:
+                users = json.load(f)
+            
+            input_val = users['user_a1'][0]['name']
+
+            name_field = WebDriverWait(self.browser, 10).until(EC.visibility_of_element_located((By.CLASS_NAME, "name-input")))
+            name_field.send_keys(input_val)
+            time.sleep(1)
+            

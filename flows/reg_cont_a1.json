@@ -38,6 +38,24 @@
             "class": "hello-btn",
             "value": "Let's go"
         }
+    ],
+    "name": [
+        {
+            "class": "name-title",
+            "value": "Let’s get to know each other."
+        },
+        {
+            "class": "name-input",
+            "value": "Your name is"
+        },
+        {
+            "class": "img-fluid",
+            "value": "name-cycle.svg"
+        },
+        {
+            "class": "name-btn",
+            "value": "Continue"
+        }
     ]
 }
 
