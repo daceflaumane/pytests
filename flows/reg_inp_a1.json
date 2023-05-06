@@ -2,13 +2,9 @@
     "user_a1": [
         {
             "name": "Test John",
-            "age": "30"
-        }
-    ],
-    "user_e1": [
-        {
-            "name": "Test Jane",
-            "age": "17"
+            "gender": "Male",
+            "age": "30",
+            "employment": "Both"
         }
     ]
 }

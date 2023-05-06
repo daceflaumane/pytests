@@ -56,6 +56,84 @@
             "class": "name-btn",
             "value": "Continue"
         }
+    ],
+    "gender": [
+        {
+            "class": "gender-title",
+            "value": "Choose your gender"
+        },
+        {
+            "class": "male-wrapper",
+            "value": "Male"
+        },
+        {
+            "class": "female-wrapper",
+            "value": "Female"
+        },
+        {
+            "class": "female-wrapper",
+            "value": "Other"
+        },
+        {
+            "class": "img-fluid",
+            "value": "gender-illustration.svg"
+        },
+        {
+            "class": "gender-btn",
+            "value": "Continue"
+        }
+    ],
+    "age": [
+        {
+            "class": "age-desc",
+            "value": "Input your age"
+        },
+        {
+            "class": "ageSelector",
+            "value": ""
+        },
+        {
+            "class": "age-btn",
+            "value": "Continue"
+        }
+    ],
+    "employment": [
+        {
+            "class": "iam-title",
+            "value": "Tell us! What do you do?"
+        },
+        {
+            "class": "iam-small",
+            "value": "I am"
+        },
+        {
+            "class": "do-option",
+            "value": "Studying"
+        },
+        {
+            "class": "do-option",
+            "value": "Employed"
+        },
+        {
+            "class": "do-option",
+            "value": "Both"
+        },
+        {
+            "class": "do-option",
+            "value": "Other"
+        },
+        {
+            "class": "employment-required",
+            "value": "Please select one"
+        },
+        {
+            "class": "img-fluid",
+            "value": "Iam-illustration.svg"
+        },
+        {
+            "class": "iam-btn",
+            "value": "Continue"
+        }
     ]
 }
 

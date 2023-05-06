@@ -3,7 +3,7 @@ from functions import RegistrationFlow
 
 class TestRegistration:
     @allure.title("Registration flow A1 - Cheap")
-    @allure.severity(allure.severity_level.NORMAL)
+    # @allure.severity(allure.severity_level.NORMAL)
     def test_successful_registration(self, browser):
         registration_page = RegistrationFlow(browser)
         with allure.step("Open registration flow landing page"):
@@ -39,3 +39,40 @@ class TestRegistration:
 
             with allure.step("Move to next page"):
                 registration_page.click_button_for_next_step("name-btn")
+
+        with allure.step("Gender page"):
+            registration_page.gender_page(
+                registration_page.reg_cont_a1,
+                registration_page.reg_inp_a1
+            )
+            
+            with allure.step("Check for JavaScript errors"):
+                registration_page.test_javascript_errors()
+
+            with allure.step("Move to next page"):
+                registration_page.click_button_for_next_step("name-btn")
+
+        with allure.step("Age page"):
+            registration_page.age_page(
+                registration_page.reg_cont_a1,
+                registration_page.reg_inp_a1
+            )
+            
+            with allure.step("Check for JavaScript errors"):
+                registration_page.test_javascript_errors()
+
+            with allure.step("Move to next page"):
+                registration_page.click_button_for_next_step("age-btn")
+
+        with allure.step("Employment page"):
+            registration_page.employment_page(
+                registration_page.reg_cont_a1,
+                registration_page.reg_inp_a1
+            )
+            
+            with allure.step("Check for JavaScript errors"):
+                registration_page.test_javascript_errors()
+
+            with allure.step("Move to next page"):
+                registration_page.click_button_for_next_step("iam-btn")
+        
