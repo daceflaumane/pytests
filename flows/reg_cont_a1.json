@@ -134,6 +134,44 @@
             "class": "iam-btn",
             "value": "Continue"
         }
+    ],
+    "focus": [
+        {
+            "class": "focus-title",
+            "value": "Choose your focus"
+        },
+        {
+            "class": "focus-desc",
+            "value": "What do you wish to achieve with ADHD Planner?"
+        },
+        {
+            "class": "focus-desc",
+            "value": "Please select at least one"
+        },
+        {
+            "class": "checkbox-wrapper",
+            "value": "Reach my goals"
+        },
+        {
+            "class": "checkbox-wrapper",
+            "value": "Feel peaceful"
+        },
+        {
+            "class": "checkbox-wrapper",
+            "value": "Manage my time"
+        },
+        {
+            "class": "checkbox-wrapper",
+            "value": "Be organized"
+        },
+        {
+            "class": "checkbox-wrapper",
+            "value": "Be productive"
+        },
+        {
+            "class": "focus-btn-bottom",
+            "value": "Continue"
+        }
     ]
 }
 

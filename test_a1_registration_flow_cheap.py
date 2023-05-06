@@ -75,4 +75,16 @@ class TestRegistration:
 
             with allure.step("Move to next page"):
                 registration_page.click_button_for_next_step("iam-btn")
+
+        with allure.step("Focus page"):
+            registration_page.focus_page(
+                registration_page.reg_cont_a1,
+                registration_page.reg_inp_a1
+            )
+            
+            with allure.step("Check for JavaScript errors"):
+                registration_page.test_javascript_errors()
+
+            with allure.step("Move to next page"):
+                registration_page.click_button_for_next_step("btn focus-btn-bottom")
         

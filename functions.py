@@ -97,7 +97,8 @@ class RegistrationFlow:
 
 
     def click_button_for_next_step(self, button):
-        continue_button = WebDriverWait(self.browser, 10).until(EC.visibility_of_element_located((By.CLASS_NAME, button)))
+        btn_xpath = f'//*[contains(@class, "{button}")]'
+        continue_button = WebDriverWait(self.browser, 10).until(EC.visibility_of_element_located((By.XPATH, btn_xpath)))
         continue_button.click()
 
 
@@ -234,6 +235,47 @@ class RegistrationFlow:
                         self.browser.page_source, name="Page HTML", attachment_type=allure.attachment_type.HTML
                     )
                     assert False
+
+            # Take a screenshot and attach it to the report
+            allure.attach(
+                self.browser.get_screenshot_as_png(),
+                name="Screen",
+                attachment_type=allure.attachment_type.PNG
+            )
+
+            time.sleep(1)
+
+
+    def focus_page(self, flow, inputs):
+        with allure.step("Element Checks"):
+            with open(flow, 'r') as f:
+                elements = json.load(f)
+            
+            self.check_elements(elements['focus'])
+
+        with allure.step("Choose focus"):
+            with open(inputs) as f:
+                users = json.load(f)
+            
+            for focus_val in users['user_a1'][0]['focus']:
+                focus_path = f'//*[contains(@class, "checkbox-wrapper")][contains(normalize-space(), "{focus_val}")]'
+
+                focus_path = WebDriverWait(self.browser, 10).until(EC.visibility_of_element_located((By.XPATH, focus_path)))
+                focus_path.click()
+
+                ticked_path = f'//label[contains(normalize-space(), "{focus_val}")]//span[@class="do-btn-icon"]'
+                chosen_focus = WebDriverWait(self.browser, 10).until(EC.visibility_of_element_located((By.XPATH, ticked_path)))
+
+                if chosen_focus:
+                    with allure.step(f"Focus: '{focus_val}'"):
+                        assert True
+                else:
+                    with allure.step(f"Couldnt select focus: {focus_val}'"):
+                        allure.attach(focus_path, name="focus_xpath_path", attachment_type=allure.attachment_type.TEXT)
+                        allure.attach(
+                            self.browser.page_source, name="Page HTML", attachment_type=allure.attachment_type.HTML
+                        )
+                        assert False
 
             # Take a screenshot and attach it to the report
             allure.attach(

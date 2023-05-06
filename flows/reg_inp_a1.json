@@ -4,7 +4,8 @@
             "name": "Test John",
             "gender": "Male",
             "age": "30",
-            "employment": "Both"
+            "employment": "Both",
+            "focus": ["Feel peaceful", "Be productive"]
         }
     ]
 }
