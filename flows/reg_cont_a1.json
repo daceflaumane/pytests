@@ -1,0 +1,178 @@
+{
+    "start": [
+        {
+            "class": "plan-title",
+            "value": "Reach for your goals"
+        },
+        {
+            "class": "plan-desc",
+            "value": "ADHD Planner will help you to stop losing track of your time and be more productive."
+        },
+        {
+            "class": "plan-btn",
+            "value": "Let's plan"
+        },
+        {
+            "class": "img-fluid",
+            "value": "welcome-circle.svg"
+        },
+        {
+            "class": "policy-text",
+            "value": "This site is not a part of the Facebook website of Meta Inc. Additionally this site is NOT endorsed by Facebook in any way. FACEBOOK is a trademark of Meta, Inc."
+        }
+    ],
+    "welcome": [
+        {
+            "class": "hello-title",
+            "value": "Start your ADHD Planner!"
+        },
+        {
+            "class": "img-fluid",
+            "value": "Group 2307.svg"
+        },
+        {
+            "class": "hello-desc",
+            "value": "To start your planning journey, we need to know a bit about you. Don’t worry, it will take only a few minutes."
+        },
+        {
+            "class": "hello-btn",
+            "value": "Let's go"
+        }
+    ],
+    "name": [
+        {
+            "class": "name-title",
+            "value": "Let’s get to know each other."
+        },
+        {
+            "class": "name-input",
+            "value": "Your name is"
+        },
+        {
+            "class": "img-fluid",
+            "value": "name-cycle.svg"
+        },
+        {
+            "class": "name-btn",
+            "value": "Continue"
+        }
+    ],
+    "gender": [
+        {
+            "class": "gender-title",
+            "value": "Choose your gender"
+        },
+        {
+            "class": "male-wrapper",
+            "value": "Male"
+        },
+        {
+            "class": "female-wrapper",
+            "value": "Female"
+        },
+        {
+            "class": "female-wrapper",
+            "value": "Other"
+        },
+        {
+            "class": "img-fluid",
+            "value": "gender-illustration.svg"
+        },
+        {
+            "class": "gender-btn",
+            "value": "Continue"
+        }
+    ],
+    "age": [
+        {
+            "class": "age-desc",
+            "value": "Input your age"
+        },
+        {
+            "class": "ageSelector",
+            "value": ""
+        },
+        {
+            "class": "age-btn",
+            "value": "Continue"
+        }
+    ],
+    "employment": [
+        {
+            "class": "iam-title",
+            "value": "Tell us! What do you do?"
+        },
+        {
+            "class": "iam-small",
+            "value": "I am"
+        },
+        {
+            "class": "do-option",
+            "value": "Studying"
+        },
+        {
+            "class": "do-option",
+            "value": "Employed"
+        },
+        {
+            "class": "do-option",
+            "value": "Both"
+        },
+        {
+            "class": "do-option",
+            "value": "Other"
+        },
+        {
+            "class": "employment-required",
+            "value": "Please select one"
+        },
+        {
+            "class": "img-fluid",
+            "value": "Iam-illustration.svg"
+        },
+        {
+            "class": "iam-btn",
+            "value": "Continue"
+        }
+    ],
+    "focus": [
+        {
+            "class": "focus-title",
+            "value": "Choose your focus"
+        },
+        {
+            "class": "focus-desc",
+            "value": "What do you wish to achieve with ADHD Planner?"
+        },
+        {
+            "class": "focus-desc",
+            "value": "Please select at least one"
+        },
+        {
+            "class": "checkbox-wrapper",
+            "value": "Reach my goals"
+        },
+        {
+            "class": "checkbox-wrapper",
+            "value": "Feel peaceful"
+        },
+        {
+            "class": "checkbox-wrapper",
+            "value": "Manage my time"
+        },
+        {
+            "class": "checkbox-wrapper",
+            "value": "Be organized"
+        },
+        {
+            "class": "checkbox-wrapper",
+            "value": "Be productive"
+        },
+        {
+            "class": "focus-btn-bottom",
+            "value": "Continue"
+        }
+    ]
+}
+
+  
